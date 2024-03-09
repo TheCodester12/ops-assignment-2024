@@ -1,0 +1,23 @@
+<!--Modal dialog-->
+<div>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Update for {{employee.firstName}} {{employee.lastName}}</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<form id="form" [formGroup]="employeeForm" *ngIf="!!employeeForm">
+			<div class="mb-3">
+				<label for="yearsOfService">Years of Service</label>
+				<div class="input-group">
+					<input #yearInput type="number" id="yearsOfService" class="form-control" name="yearsOfServiceName" 
+                        [formControl]="yearControl"
+                        [value]="yearControl.value" />
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Cancel" (click)="activeModal.dismiss('Cancel click')">Cancel</button>
+		<button class="btn btn-primary" data-dismiss="modal" (click)="submit(employeeForm)">Submit</button>
+	</div>
+<div>

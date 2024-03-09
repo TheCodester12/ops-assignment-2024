@@ -1,0 +1,26 @@
+<h1 class="h1-header">Employees</h1>
+
+<div class="content" *ngIf="employees$ | async as employees">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Years of Service</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (employee of employees; track employee.id; let i = $index) {
+      <tr>
+        <th scope="row">
+          <a href="javascript:void(0);" (click)="openDialog(employee)" (keydown.enter)="openDialog(employee)">{{ employee.id }}</a>
+        </th>
+        <td>{{ employee.firstName }}</td>
+        <td>{{ employee.lastName }}</td>
+        <td>{{ employee.yearsOfService}}</td>
+      </tr>
+      }
+    </tbody>
+  </table>
+</div>
