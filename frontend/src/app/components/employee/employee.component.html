@@ -2,7 +2,7 @@
 <div>
 	<div class="modal-header">
 		<h4 class="modal-title" id="modal-basic-title">Update for {{employee.firstName}} {{employee.lastName}}</h4>
-		<button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss('Cross click')"></button>
+		<button type="button" class="btn-close" aria-label="Close" (click)="activeModal.dismiss(constants.EVENT_UPDATE_CANCEL)"></button>
 	</div>
 	<div class="modal-body">
 		<form id="form" [formGroup]="employeeForm" *ngIf="!!employeeForm">
@@ -17,7 +17,7 @@
 		</form>
 	</div>
 	<div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Cancel" (click)="activeModal.dismiss('Cancel click')">Cancel</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Cancel" (click)="activeModal.dismiss(constants.EVENT_UPDATE_CANCEL)">Cancel</button>
 		<button class="btn btn-primary" data-dismiss="modal" (click)="submit(employeeForm)">Submit</button>
 	</div>
 <div>

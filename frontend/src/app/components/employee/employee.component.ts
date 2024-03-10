@@ -38,12 +38,14 @@ export class EmployeeComponent extends BaseComponent implements OnInit, OnDestro
         tap ((res: Employee) => {
           if(res) {
             console.log("Updated successfully!");
-            this.activeModal.close('update');        
-          }        
+            this.activeModal.close(super.constants.EVENT_UPDATE_SUCCESS);        
+          } else {
+            this.activeModal.close(super.constants.EVENT_UPDATE_FAIL);  
+          }       
         })
       ).subscribe();
     } else {
-      this.activeModal.close('Submit click');
+      this.activeModal.close(super.constants.EVENT_UPDATE_NA);
     }
   }
 

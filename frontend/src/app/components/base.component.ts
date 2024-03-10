@@ -1,5 +1,6 @@
 import { ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { ReplaySubject } from 'rxjs';
+import { Constants } from '../utilities/constants';
 
 @Component({
   selector: 'app-base',
@@ -19,4 +20,8 @@ export class BaseComponent implements OnInit, OnDestroy {
   }
 
   bindObservables() {}
+
+  get constants() {
+    return Constants;
+  }
 }
