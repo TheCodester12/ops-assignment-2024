@@ -49,7 +49,7 @@ Step 5. Springboot application also create H2 database as well as schema, table 
 * assignment/src/main/resources/schema.sql
 * assignment/src/main/resources/data.sql
 
-Step 6. You can go to: [http://assignment/src/main/resources](http://localhost:8080/h2-console) with the following entry to enter database admin console,
+Step 6. You can go to: http://localhost:8080/h2-console with the following entry to enter database admin console,
 *  URL: jdbc:h2:~/shawndb
 *  User Name: sa
 *  Password: sa
