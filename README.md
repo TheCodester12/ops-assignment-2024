@@ -30,7 +30,7 @@ Please download and install the following tools
 * NodeJS (^18.13.0 || ^20.9.0): https://nodejs.org/dist/v20.11.1/node-v20.11.1-x64.msi
 * Angular CLI 17.2.0+
   ```bash
-  npm i @angular/cli
+  npm i -g @angular/cli
   ```
 * Visual Studio Code: https://code.visualstudio.com/
 
@@ -57,7 +57,7 @@ Step 6. You can go to: http://localhost:8080/h2-console with the following entry
 ![H2 DB console login](./doc/images/h2-db-login.png)
 ![H2 DB details](./doc/images/h2-db-details.png)
 
-Step 7. Swagger has been wired up to the backend applicaiton as API document tool and can be access at once server is up and running. At this point, backend RESTFul services are ready.
+Step 7. Swagger has been wired up to the backend applicaiton as API document tool and can be access at http://localhost:8080/swagger-ui/index.html once server is up and running. At this point, backend RESTFul services are ready.
 ![API document](./doc/images/swagger.png)
 
 Step 8. Launch VS code and import frontend folder. Open terminal and run the following command to pull all the dependencies (node_modules),
